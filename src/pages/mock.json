@@ -1,0 +1,142 @@
+[
+  {
+    "id": "985939",
+    "title": "Fall",
+    "image": "https://image.tmdb.org/t/p/w300/spCAxD99U1A6jsiePFoqdEcY0dG.jpg",
+  
+    "__typename": "Movie"
+  },
+  {
+    "id": "532639",
+    "title": "Pinocchio",
+    "image": "https://image.tmdb.org/t/p/w300/h32gl4a3QxQWNiNaR4Fc1uvLBkV.jpg",
+   
+    "__typename": "Movie"
+  },
+  {
+    "id": "760741",
+    "title": "Beast",
+    "image": "https://image.tmdb.org/t/p/w300/iRV0IB5xQeOymuGGUBarTecQVAl.jpg",
+
+    "__typename": "Movie"
+  },
+  {
+    "id": "760161",
+    "title": "Orphan: First Kill",
+    "image": "https://image.tmdb.org/t/p/w300/wSqAXL1EHVJ3MOnJzMhUngc8gFs.jpg",
+
+    "__typename": "Movie"
+  },
+  {
+    "id": "629176",
+    "title": "Samaritan",
+    "image": "https://image.tmdb.org/t/p/w300/vwq5iboxYoaSpOmEQrhq9tHicq7.jpg",
+   
+    "__typename": "Movie"
+  },
+  {
+    "id": "579974",
+    "title": "RRR",
+    "image": "https://image.tmdb.org/t/p/w300/wE0I6efAW4cDDmZQWtwZMOW44EJ.jpg",
+
+    "__typename": "Movie"
+  },
+  {
+    "id": "810693",
+    "title": "Jujutsu Kaisen 0",
+    "image": "https://image.tmdb.org/t/p/w300/yzkgx79vj1KsZBzxFBIsQBwBkPE.jpg",
+   
+    "__typename": "Movie"
+  },
+  {
+    "id": "616037",
+    "title": "Thor: Love and Thunder",
+    "image": "https://image.tmdb.org/t/p/w300/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+  
+    "__typename": "Movie"
+  },
+  {
+    "id": "610150",
+    "title": "Dragon Ball Super: Super Hero",
+    "image": "https://image.tmdb.org/t/p/w300/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg",
+  
+    "__typename": "Movie"
+  },
+  {
+    "id": "539681",
+    "title": "DC League of Super-Pets",
+    "image": "https://image.tmdb.org/t/p/w300/r7XifzvtezNt31ypvsmb6Oqxw49.jpg",
+   
+    "__typename": "Movie"
+  },
+  {
+    "id": "960700",
+    "title": "Fullmetal Alchemist: The Revenge of Scar",
+    "image": "https://image.tmdb.org/t/p/w300/c5OwwBNyJkwyroIOIJL9IiRjydR.jpg",
+
+    "__typename": "Movie"
+  },
+  {
+    "id": "766507",
+    "title": "Prey",
+    "image": "https://image.tmdb.org/t/p/w300/ujr5pztc1oitbe7ViMUOilFaJ7s.jpg",
+   
+    "__typename": "Movie"
+  },
+  {
+    "id": "921360",
+    "title": "Wire Room",
+    "image": "https://image.tmdb.org/t/p/w300/b9ykj4v8ykjRoGB7SpI1OuxblNU.jpg",
+ 
+    "__typename": "Movie"
+  },
+  {
+    "id": "781099",
+    "title": "Inexorable",
+    "image": "https://image.tmdb.org/t/p/w300/iiclsw6zgRJz5D5Cc6sn4Cs9GQo.jpg",
+ 
+    "__typename": "Movie"
+  },
+  {
+    "id": "361743",
+    "title": "Top Gun: Maverick",
+    "image": "https://image.tmdb.org/t/p/w300/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+  
+    "__typename": "Movie"
+  },
+  {
+    "id": "507086",
+    "title": "Jurassic World Dominion",
+    "image": "https://image.tmdb.org/t/p/w300/kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg",
+
+    "__typename": "Movie"
+  },
+  {
+    "id": "19995",
+    "title": "Avatar",
+    "image": "https://image.tmdb.org/t/p/w300/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+   
+    "__typename": "Movie"
+  },
+  {
+    "id": "773867",
+    "title": "Seoul Vibe",
+    "image": "https://image.tmdb.org/t/p/w300/ffX0TL3uKerLXACkuZGWhAPMbAq.jpg",
+
+    "__typename": "Movie"
+  },
+  {
+    "id": "773975",
+    "title": "End of the Road",
+    "image": "https://image.tmdb.org/t/p/w300/tLFIMuPWJHlTJ6TN8HCOiSD6SdA.jpg",
+  
+    "__typename": "Movie"
+  },
+  {
+    "id": "1015602",
+    "title": "Welcome to the Club",
+    "image": "https://image.tmdb.org/t/p/w300/kxB9E6fo0ycHzd13oOTHmGa5Njd.jpg",
+
+    "__typename": "Movie"
+  }
+]

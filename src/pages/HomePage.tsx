@@ -1,57 +1,40 @@
 // HomePage.tsx
-import React, { useState } from "react";
-import { Link, Element } from "react-scroll";
-import images from "../utils/ImageLoader";
-import "../App.css";
-import { Box, HStack, IconButton } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"; // Import arrow icons
+import React from "react";
+import Slider from "react-slick"; // Import the Slider component
+import "./slick.css"; // Import slick carousel CSS
+import "./slick-theme.css"; // Import slick carousel theme CSS
+import { Box, Center } from "@chakra-ui/react";
+import MovieCard from "../components/HairCard";
+import data from "./mock.json";
 
 const HomePage = () => {
-  const [startIndex, setStartIndex] = useState(0);
-
-  const handleScroll = (direction: "left" | "right") => {
-    const lastIndex = images.length - 1;
-    let newStartIndex;
-
-    if (direction === "left") {
-      newStartIndex = startIndex === 0 ? lastIndex - 3 : startIndex - 1;
-    } else {
-      newStartIndex = startIndex === lastIndex - 3 ? 0 : startIndex + 1;
-    }
-
-    setStartIndex(newStartIndex);
+  // Settings for the react-slick
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      // Add more breakpoints as needed
+    ],
   };
 
-  console.log(images);
-
   return (
-    <Box h="100vh" display="flex" alignItems="center" justifyContent="center">
-      <HStack>
-        <IconButton
-          aria-label="Scroll Left"
-          icon={<ChevronLeftIcon />}
-          onClick={() => handleScroll("left")}
-        />
-        {images.slice(startIndex, startIndex + 4).map((image, index) => (
-          <Box
-            key={index}
-            boxSize="40vh"
-            height="80vh"
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: "cover",
-            }}
-            border="2px"
-            m="2"
-          />
-        ))}
-        <IconButton
-          aria-label="Scroll Right"
-          icon={<ChevronRightIcon />}
-          onClick={() => handleScroll("right")}
-        />
-      </HStack>
-    </Box>
+    <Slider {...settings}>
+      {data.map((movie) => (
+        <MovieCard movie={movie} />
+      ))}
+    </Slider>
   );
 };
 
