@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 
-// Define a type for the movie prop
 type MovieType = {
   image: string;
   title: string;
@@ -11,27 +10,30 @@ type MovieType = {
 const MovieCard = ({ movie }: { movie: MovieType }) => {
   return (
     <Box
-      maxW="250px"
+      maxW="350px"
+      bgColor="white"
       position="relative"
-      boxShadow="lg"
-      borderRadius="lg"
+      boxShadow="0px 4px 8px rgba(0, 0, 0, black)"
+      borderRadius="15px"
       overflow="hidden"
+      p="20px"
+      pt="20px"
+      pb="40px"
+      m="20px"
+      textAlign="center"
     >
-      <Box position="relative">
-        <Image
-          src={movie.image}
-          alt={movie.title}
-          height="350px"
-          width="100%"
-          objectFit="cover"
-        />
-      </Box>
-
-      <VStack spacing={2} align="stretch" p={4}>
-        <Text fontSize="lg" fontWeight="bold">
-          {movie.title}
-        </Text>
-      </VStack>
+      <Image
+        src={movie.image}
+        alt={movie.title}
+        boxShadow="0px 4px 8px rgba(0, 0, 0, 0.6)"
+        height="500px"
+        width="100%"
+        objectFit="cover"
+        borderRadius="8px 8px 0 0"
+      />
+      <Text fontSize="md" fontWeight="bold" mt="2">
+        {movie.title}
+      </Text>
     </Box>
   );
 };

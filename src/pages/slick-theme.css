@@ -1,6 +1,5 @@
 @charset 'UTF-8';
 
-/* Icons */
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -118,7 +117,7 @@
   cursor: pointer;
 }
 .slick-dots li button {
-  font-size: 50;
+  font-size: 0;
   line-height: 0;
 
   display: block;
@@ -144,7 +143,7 @@
 }
 .slick-dots li button:before {
   font-family: "slick";
-  font-size: 50px;
+  font-size: 6px;
   line-height: 20px;
 
   position: absolute;
