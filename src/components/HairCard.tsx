@@ -13,13 +13,13 @@ const MovieCard = ({ movie }: { movie: MovieType }) => {
       maxW="350px"
       bgColor="white"
       position="relative"
-      boxShadow="0px 4px 8px rgba(0, 0, 0, black)"
+      boxShadow="0px 4px 8px rgba(0, 0, 0, 0.9)"
       borderRadius="15px"
       overflow="hidden"
       p="20px"
       pt="20px"
       pb="40px"
-      m="20px"
+      m="0 30px"
       textAlign="center"
     >
       <Image
