@@ -1,45 +1,53 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 
-// Define a type for the movie prop
-type MovieType = {
-  image: string;
+// Updated type to include optional image and URL
+type ContentItemType = {
+  image?: string;
   title: string;
+  url?: string; // Optional URL for links
 };
 
-const MovieCard = ({ movie }: { movie: MovieType }) => {
+const MovieCard = ({ movie }: { movie: ContentItemType }) => {
   return (
     <Box
-      maxW="250px"
+      maxW="350px"
+      bgColor="white"
       position="relative"
-      boxShadow="lg"
-      borderRadius="lg"
+      boxShadow="0px 4px 8px rgba(0, 0, 0, 0.9)"
+      borderRadius="15px"
       overflow="hidden"
+      p="20px"
+      pt="20px"
+      pb="40px"
+      m="0px 0px 15px 30px"
+      textAlign="center"
     >
-      <Box position="relative">
+      {movie.image && (
         <Image
           src={movie.image}
           alt={movie.title}
-          height="350px"
+          boxShadow="0px 4px 8px rgba(0, 0, 0, 0.6)"
+          height="500px"
           width="100%"
           objectFit="cover"
+          borderRadius="8px 8px 0 0"
         />
-      </Box>
-
-      <VStack spacing={2} align="stretch" p={4}>
-        <Text fontSize="lg" fontWeight="bold">
-          {movie.title}
-        </Text>
-      </VStack>
+      )}
+      <Text fontSize="md" fontWeight="bold" mt="2">
+        {movie.title}
+      </Text>
     </Box>
   );
 };
 
+// Updated propTypes
 MovieCard.propTypes = {
   movie: PropTypes.shape({
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string, // No longer required
     title: PropTypes.string.isRequired,
+    url: PropTypes.string,
   }).isRequired,
 };
 

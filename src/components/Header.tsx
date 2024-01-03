@@ -13,7 +13,7 @@ const Header = () => {
       backgroundImage={`url(${headerImage})`}
       backgroundPosition="left"
       backgroundSize="contain"
-      color="white"
+      bgColor="#323232"
       py="4"
       height="200px"
       backgroundRepeat="no-repeat"

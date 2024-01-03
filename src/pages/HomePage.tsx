@@ -6,15 +6,19 @@ import "./slick-theme.css"; // Import slick carousel theme CSS
 import { Box, Center } from "@chakra-ui/react";
 import MovieCard from "../components/HairCard";
 import data from "./mock.json";
+import movies from "../utils/HairModels";
 
 const HomePage = () => {
   // Settings for the react-slick
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -30,11 +34,14 @@ const HomePage = () => {
   };
 
   return (
-    <Slider {...settings}>
-      {data.map((movie) => (
-        <MovieCard movie={movie} />
-      ))}
-    </Slider>
+    <Box bgColor="#323232">
+      {" "}
+      <Slider {...settings}>
+        {movies.map((movie) => (
+          <MovieCard movie={movie} />
+        ))}
+      </Slider>
+    </Box>
   );
 };
 
