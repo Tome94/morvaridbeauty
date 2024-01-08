@@ -38,7 +38,7 @@ const movies: ContentItem[] = [
   createContentItem("7", "brown", images[6]),
   createContentItem("8", "brown", images[7]),
   createContentItem("9", "brown", images[8]),
-  createContentItem("10", "Instagram", images[10], "https://instagram.com/yourusername"),
+  createContentItem("10", "Instagram", images[10], "https://www.instagram.com/morvarid.beauty.ca"),
 
   // Add more movies as needed
 ];

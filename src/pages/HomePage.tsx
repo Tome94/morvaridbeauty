@@ -1,15 +1,14 @@
-// HomePage.tsx
 import React from "react";
-import Slider from "react-slick"; // Import the Slider component
-import "./slick.css"; // Import slick carousel CSS
-import "./slick-theme.css"; // Import slick carousel theme CSS
+import Slider from "react-slick";
+import "./slick.css";
+import "./slick-theme.css";
 import { Box, Center } from "@chakra-ui/react";
 import MovieCard from "../components/HairCard";
-import data from "./mock.json";
 import movies from "../utils/HairModels";
+import About from "./About";
+import Calender from "../components/calender";
 
 const HomePage = () => {
-  // Settings for the react-slick
   const settings = {
     dots: true,
     infinite: true,
@@ -34,13 +33,16 @@ const HomePage = () => {
   };
 
   return (
-    <Box bgColor="#323232">
+    <Box bgColor="#323232" pt="200px">
       {" "}
+      {/* Add padding top to create space below the fixed header */}
+      <About />
       <Slider {...settings}>
         {movies.map((movie) => (
-          <MovieCard movie={movie} />
+          <MovieCard movie={movie} key={movie.id} />
         ))}
       </Slider>
+      <Calender />
     </Box>
   );
 };
