@@ -1,37 +1,96 @@
-import React, { useEffect } from "react";
-import Cal, { getCalApi } from "@calcom/embed-react";
+import React, { useState } from "react";
+import Cal from "@calcom/embed-react";
+import { Button, Flex, Heading, useDisclosure, Box } from "@chakra-ui/react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from "@chakra-ui/react";
 
-const Calender = () => {
-  useEffect(() => {
-    const initializeCal = async () => {
-      try {
-        const cal = await getCalApi();
+const Calender = (props) => {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-        // Check if cal.ns is available before accessing it
-        if (cal.ns) {
-          cal.ns["45-min-haircut"]("ui", {
-            styles: { branding: { brandColor: "#323232" } },
-            hideEventTypeDetails: false,
-            layout: "month_view",
-          });
-        } else {
-          console.error("cal.ns is undefined");
-        }
-      } catch (error) {
-        console.error("Error initializing Cal API:", error);
-      }
-    };
+  function renderButtons() {
+    const createButton = (label, event) => (
+      <Button
+        key={label}
+        onClick={() => {
+          setSelectedEvent(event);
+          onOpen();
+        }}
+        size="lg"
+        margin="50px"
+        padding="30px"
+        colorScheme="black"
+        variant="outline"
+      >
+        {label}
+      </Button>
+    );
 
-    initializeCal();
-  }, []);
+    return (
+      <Box>
+        {createButton("45 Min Haircut", "45-min-haircut")}
+        {createButton("15 Min Haircut", "15min")}
+      </Box>
+    );
+  }
 
   return (
-    <Cal
-      namespace="45-min-haircut"
-      calLink="morvaridbeauty/45-min-haircut"
-      style={{ width: "100%", height: "100%", overflow: "scroll" }}
-      config={{ layout: "month_view" }}
-    />
+    <>
+      <Box
+        backgroundColor="rgb(240, 234, 222)"
+        paddingTop="100px"
+        margin="100px 50px 0px 50px"
+        textAlign="center"
+      >
+        <Heading>Choose your Appointment</Heading>
+        {renderButtons()}
+      </Box>
+
+      {selectedEvent && (
+        <Modal
+          isOpen={isOpen}
+          onClose={() => {
+            setSelectedEvent(null);
+            onClose();
+          }}
+        >
+          <ModalOverlay />
+          <ModalContent maxW="1200px">
+            <ModalHeader>Modal Title</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Cal
+                namespace={selectedEvent}
+                calLink={`morvaridbeauty/${selectedEvent}`}
+                style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                config={{ layout: "month_view" }}
+              />
+            </ModalBody>
+
+            <ModalFooter>
+              <Button
+                colorScheme="blue"
+                mr={3}
+                onClick={() => {
+                  setSelectedEvent(null);
+                  onClose();
+                }}
+              >
+                Close
+              </Button>
+              <Button variant="ghost">Secondary Action</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      )}
+    </>
   );
 };
 
