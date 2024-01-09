@@ -7,7 +7,6 @@ const Navigation = () => {
   return (
     <HStack>
       <Pricing />
-      <Booking />
     </HStack>
   );
 };

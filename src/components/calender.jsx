@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cal from "@calcom/embed-react";
-import { Button, Flex, Heading, useDisclosure, Box } from "@chakra-ui/react";
+import { Button, Heading, useDisclosure, Box } from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,
@@ -11,7 +11,7 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 
-const Calender = (props) => {
+const Calender = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
