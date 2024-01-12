@@ -1,4 +1,7 @@
 import images from "./ImageLoader";
+import instagram from "../assets/HairPromo/instagram.jpg"
+import blueBalayage from "../assets/HairPromo/Hair1.png"
+
 interface ContentItem {
   id: string;
   title: string;
@@ -7,7 +10,7 @@ interface ContentItem {
   url?: string; // Optional URL for links
 }
 
-// Updated factory function for creating movie objects
+// Updated factory function for creating hair objects
 const createContentItem = (id: string, title: string, image: any, url?: string): ContentItem => {
   if (url) {
     return {
@@ -22,25 +25,24 @@ const createContentItem = (id: string, title: string, image: any, url?: string):
       id,
       title,
       image,
-      __typename: "Movie",
+      __typename: "Hair",
     };
   }
 };
 
 // Generate your mock JSON using the factory function
-const movies: ContentItem[] = [
-  createContentItem("1", "highlights", images[0]), // Assuming images is your array of loaded images
-  createContentItem("2", "brown", images[1]),
-  createContentItem("3", "blonde", images[2]),
-  createContentItem("4", "red", images[3]),
-  createContentItem("5", "brown", images[4]),
-  createContentItem("6", "brown", images[5]),
-  createContentItem("7", "brown", images[6]),
-  createContentItem("8", "brown", images[7]),
-  createContentItem("9", "brown", images[8]),
-  createContentItem("10", "Instagram", images[10], "https://www.instagram.com/morvarid.beauty.ca"),
+const hairs: ContentItem[] = [
+  createContentItem("1", "Blue Balayage", blueBalayage), // Assuming images is your array of loaded images
+  createContentItem("2", "Full Color, Cut & Styling", images[1]),
+  createContentItem("3", "Silver Balayage, Cut & Styling", images[2]),
+  createContentItem("4", "Highlights with Styling", images[3]),
+  createContentItem("5", "Styling", images[4]),
+  createContentItem("6", "Ketin Treatment", images[5]),
+  createContentItem("7", "HighLights with Styling", images[6]),
+  createContentItem("8", "Full Bleach Color", images[7]),
+  createContentItem("9", "Half Updo with Extensions", images[8]),
+  createContentItem("10", "Instagram", instagram, "https://www.instagram.com/morvarid.hairstudio?igsh=empmbTMzemhrNjQ=")
 
-  // Add more movies as needed
 ];
 
-export default movies;
+export default hairs;

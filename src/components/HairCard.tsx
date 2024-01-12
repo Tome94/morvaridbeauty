@@ -9,12 +9,12 @@ type ContentItemType = {
   url?: string; // Optional URL for links
 };
 
-const MovieCard = ({ movie }: { movie: ContentItemType }) => {
+const HairCard = ({ hair }: { hair: ContentItemType }) => {
   return (
     <Link
-      href={movie.url} // Use "#" if no URL is provided
-      _hover={{ textDecoration: movie.url ? "underline" : "none" }}
-      isExternal={!!movie.url} // Open link in a new tab if URL is provided
+      href={hair.url} // Use "#" if no URL is provided
+      _hover={{ textDecoration: hair.url ? "underline" : "none" }}
+      isExternal={!!hair.url} // Open link in a new tab if URL is provided
       display="block"
     >
       <Box
@@ -30,19 +30,19 @@ const MovieCard = ({ movie }: { movie: ContentItemType }) => {
         m="50px 0px 15px 30px"
         textAlign="center"
       >
-        {movie.image && (
+        {hair.image && (
           <Image
-            src={movie.image}
-            alt={movie.title}
+            src={hair.image}
+            alt={hair.title}
             boxShadow="0px 4px 8px rgba(0, 0, 0, 0.6)"
             height="500px"
             width="100%"
-            objectFit="contain"
+            objectFit="cover"
             borderRadius="8px 8px 0 0"
           />
         )}
-        <Text fontSize="md" fontWeight="bold" mt="2">
-          {movie.title}
+        <Text fontSize="md" fontWeight="bold" color="gray.600" mt="25px">
+          {hair.title}
         </Text>
       </Box>
     </Link>
@@ -50,12 +50,12 @@ const MovieCard = ({ movie }: { movie: ContentItemType }) => {
 };
 
 // Updated propTypes
-MovieCard.propTypes = {
-  movie: PropTypes.shape({
+HairCard.propTypes = {
+  hair: PropTypes.shape({
     image: PropTypes.string,
     title: PropTypes.string.isRequired,
     url: PropTypes.string,
   }).isRequired,
 };
 
-export default MovieCard;
+export default HairCard;

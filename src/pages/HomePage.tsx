@@ -2,11 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
-import { Box, Center } from "@chakra-ui/react";
-import MovieCard from "../components/HairCard";
-import movies from "../utils/HairModels";
+import { Box } from "@chakra-ui/react";
+import HairCard from "../components/HairCard";
+import hairs from "../utils/HairModels";
 import About from "./About";
-import Calender from "../components/calender";
 
 const HomePage = () => {
   const settings = {
@@ -48,14 +47,12 @@ const HomePage = () => {
   return (
     <Box bgColor="#323232" pt="200px">
       {" "}
-      {/* Add padding top to create space below the fixed header */}
       <About />
       <Slider {...settings}>
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id} />
+        {hairs.map((hair) => (
+          <HairCard hair={hair} key={hair.id} />
         ))}
       </Slider>
-      <Calender />
     </Box>
   );
 };

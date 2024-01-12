@@ -15,7 +15,7 @@ function About() {
       <Image
         height="40%"
         width="40%"
-        marginRight={["0px", "0px", "-100px"]}
+        marginRight={["0px", "0px", "-50px"]}
         mb={["20px", "20px", "0px"]}
         src={bgImage}
       />
