@@ -19,7 +19,7 @@ function About() {
         mb={["20px", "20px", "0px"]}
         src={bgImage}
       />
-      <Box flex="1">
+      <Box flex="1" marginBottom="50px">
         <Heading
           fontFamily="Playfair Display SC"
           marginBottom="20px"
@@ -46,9 +46,9 @@ function About() {
         </Text>
         <Center
           position={["relative"]}
-          bottom="-90px"
           left={["0%", "0%", "-5%"]}
           width="100%"
+          marginTop="20px"
         >
           <Booking />
         </Center>
