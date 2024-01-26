@@ -2,11 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import HairCard from "../components/HairCard";
 import hairs from "../utils/HairModels";
 import About from "./About";
 import MapComponent from "../components/MapComponent";
+import InfoCard from "../components/InfoCard";
 
 const HomePage = () => {
   const settings = {
@@ -44,23 +45,44 @@ const HomePage = () => {
       },
     ],
   };
-
+  const businessInfo = {
+    name: "Morvarid @ Nola Salon",
+    address: "390 Steeles Ave W, Thornhill, CA",
+    phone: "(416) 843-9911",
+    hours: [
+      "Monday: 10 a.m.–7 p.m.",
+      "Tuesday: 10 a.m.–7 p.m.",
+      "Wednesday: 10 a.m.–7 p.m.",
+      "Thursday: 10 a.m.–7 p.m.",
+      "Friday: 10 a.m.–7 p.m.",
+      "Saturday: 10 a.m.–7 p.m.",
+      "Sunday: Closed",
+    ],
+  };
   return (
-    <Box bgColor="#323232" pt="200px">
-      {" "}
+    <Box bgColor="#323232" pt={{ base: "200px", md: "200px" }}>
       <About />
       <Slider {...settings}>
         {hairs.map((hair) => (
           <HairCard hair={hair} key={hair.id} />
         ))}
       </Slider>
-      <Box
+      <Flex
+        direction={{ base: "column", md: "row" }}
         backgroundColor="rgb(240, 234, 222)"
-        margin="60px 50px 0px 50px"
-        padding="30px"
+        m={{ base: "30px 10px 0px 10px", md: "60px 50px 0px 50px" }} // Responsive margin
+        p={{ base: "0px", md: "30px" }} // Responsive padding
+        align="center"
+        justify="center"
       >
         <MapComponent />
-      </Box>
+        <InfoCard
+          name={businessInfo.name}
+          address={businessInfo.address}
+          phone={businessInfo.phone}
+          hours={businessInfo.hours}
+        />
+      </Flex>
     </Box>
   );
 };
