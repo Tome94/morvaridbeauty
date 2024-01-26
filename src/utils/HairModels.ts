@@ -41,7 +41,7 @@ const hairs: ContentItem[] = [
   createContentItem("7", "HighLights with Styling", images[6]),
   createContentItem("8", "Full Bleach Color", images[7]),
   createContentItem("9", "Half Updo with Extensions", images[8]),
-  createContentItem("10", "Instagram", instagram, "https://www.instagram.com/morvarid.hairstudio?igsh=empmbTMzemhrNjQ=")
+  createContentItem("10", "Instagram", instagram, "https://www.instagram.com/morvarid.beauty.ca/?next=%2Fyanti0508%2Ftagged%2F")
 
 ];
 

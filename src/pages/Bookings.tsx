@@ -7,23 +7,12 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-
+import AppointmentButtonCard from "../components/appointmentButton";
 function Booking() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Link
-        onClick={() => {
-          onOpen();
-        }}
-        textDecoration="none"
-        _hover={{ textDecoration: "underline" }}
-      >
-        <Text as="h2" fontSize="3xl" fontFamily="Playfair Display SC">
-          Book an Appointment
-        </Text>
-      </Link>
-
+      <AppointmentButtonCard onOpen={onOpen} />
       <Modal
         isOpen={isOpen}
         onClose={() => {

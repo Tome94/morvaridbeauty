@@ -6,6 +6,7 @@ import { Box } from "@chakra-ui/react";
 import HairCard from "../components/HairCard";
 import hairs from "../utils/HairModels";
 import About from "./About";
+import MapComponent from "../components/MapComponent";
 
 const HomePage = () => {
   const settings = {
@@ -53,6 +54,13 @@ const HomePage = () => {
           <HairCard hair={hair} key={hair.id} />
         ))}
       </Slider>
+      <Box
+        backgroundColor="rgb(240, 234, 222)"
+        margin="60px 50px 0px 50px"
+        padding="30px"
+      >
+        <MapComponent />
+      </Box>
     </Box>
   );
 };
