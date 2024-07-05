@@ -29,19 +29,19 @@ function About() {
         </Heading>
         <Text fontSize={["md", "lg", "xl"]} color="gray.600">
           With two decades of passion and creativity in the world of
-          hairstyling, Morvaid stands as a seasoned master hairstylist. Her
+          hairstyling, Morvarid stands as a seasoned master hairstylist. Her
           journey began 20 years ago, and since then, she has been transforming
           the locks and lives of countless clients.
         </Text>
         <Text fontSize={["md", "lg", "xl"]} color="gray.600" mt="4">
-          Morvaid's commitment to her craft goes beyond just cutting and styling
-          hair. She believes in creating personalized experiences for each
-          client, understanding their unique preferences, and bringing out the
-          best in their natural beauty.
+          Morvarid's commitment to her craft goes beyond just cutting and
+          styling hair. She believes in creating personalized experiences for
+          each client, understanding their unique preferences, and bringing out
+          the best in their natural beauty.
         </Text>
         <Text fontSize={["md", "lg", "xl"]} color="gray.600" mt="4">
           Whether you're looking for a fresh new look, a classic style, or
-          expert advice on maintaining your hair's health, Morvaid's expertise
+          expert advice on maintaining your hair's health, Morvarid's expertise
           and artistic touch will leave you feeling confident and beautiful.
         </Text>
         <Center
