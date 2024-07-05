@@ -1,18 +1,23 @@
 {
-  "short_name": "Hair Salon",
-  "name": "Morvarid Beauty Salon"
+  "name": "Morvarid Hair Studio",
+  "short_name": "MB Studio",
+  "description": "Providing top-notch beauty and hair services in North York, Toronto.",
+  "icons": [
+    {
       "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
       "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
   "display": "standalone",
+  "background_color": "#ffffff",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "scope": "/"
 }
