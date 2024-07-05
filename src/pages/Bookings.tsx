@@ -26,7 +26,17 @@ function Booking() {
               Book With Morvarid/Mary
             </Heading>
           </ModalHeader>
-          <ModalCloseButton zIndex="1" size="lg" />
+          <ModalCloseButton
+            zIndex="1"
+            size="lg"
+            marginRight="25px"
+            backgroundColor="whitesmoke"
+            sx={{
+              "&:hover": {
+                border: "2px solid black",
+              },
+            }}
+          />
           <ModalBody zIndex="0">
             <Box
               as="iframe"
