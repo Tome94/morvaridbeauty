@@ -8,9 +8,11 @@ interface RequireContext {
 
 const importAll = (context: RequireContext) => context.keys().map(context);
 
-const imagesContext = require.context("../assets/HairPromo", false, /\.(png|jpg|jpeg)$/);
-const imagePaths = imagesContext.keys();
-console.log(imagePaths);
+const imagesContext = require.context(
+  "../assets/HairPromo",
+  false,
+  /\.(png|jpg|jpeg)$/
+);
 
 const images = importAll(imagesContext);
 
