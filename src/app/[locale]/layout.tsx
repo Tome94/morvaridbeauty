@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import { BookingProvider } from "@/context/BookingContext";
+import { Analytics } from "@vercel/analytics/next"
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -221,6 +222,7 @@ export default async function LocaleLayout({
             {children}
           </BookingProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
