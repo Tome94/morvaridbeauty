@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "title": "Morvarid Beauty | Master Hairstylist in Thornhill",
+    "description": "With over 20 years of experience, Morvarid specializes in balayage, curly hair, lived-in hairstyles, and vibrant color. Modern Cuts. Clean Style. Effortless Beauty."
+  },
+  "nav": {
+    "bookNow": "BOOK NOW",
+    "meetMe": "MEET ME",
+    "services": "SERVICES",
+    "pricing": "PRICING",
+    "location": "LOCATION"
+  },
+  "hero": {
+    "tagline": "Modern Style. Clean Cuts. Effortless Beauty.",
+    "cta": "Book Now"
+  },
+  "about": {
+    "intro": "Morvarid is a Toronto-based hair and makeup artist known for creating modern, polished looks.",
+    "experience": "22+ Years of Experience",
+    "heading": "Meet Morvarid",
+    "bio1": "With 22 years behind the chair, Morvarid brings artistry and precision to every appointment. Known for dimensional color—balayage and highlights that catch light beautifully—she creates looks that are modern yet timeless.",
+    "bio2": "Her expertise extends to smoothing and repair treatments including keratin and hair botox, restoring health and manageability to even the most stressed strands. Every haircut is executed with precision, finished with styling that elevates the final look.",
+    "bio3": "For weddings, engagements, and special events, Morvarid delivers the complete package—coordinating hair and makeup so you feel confident, camera-ready, and fully put together.",
+    "quote": "Every client is different. I listen first, then create something that's uniquely you.",
+    "quoteAuthor": "— Morvarid",
+    "cta": "Book a Consultation"
+  },
+  "services": {
+    "title": "Services",
+    "discover": "DISCOVER",
+    "back": "Back",
+    "backToServices": "← Back to Services",
+    "colour": {
+      "title": "Colour",
+      "subtitle": "Highlights & Balayage"
+    },
+    "treatments": {
+      "title": "Treatments",
+      "subtitle": "Keratin & Hair Botox"
+    },
+    "cutStyle": {
+      "title": "Cut & Style",
+      "subtitle": "Precision Haircuts"
+    },
+    "bridalEvents": {
+      "title": "Bridal & Events",
+      "subtitle": "Hair & Makeup"
+    },
+    "browFace": {
+      "title": "Brow & Face",
+      "subtitle": "Waxing & Threading"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "A selection of our most popular services. Prices may vary based on hair length and density.",
+    "viewFullMenu": "View Full Menu & Book",
+    "disclaimer": "Complimentary consultation available for colour and treatment services.",
+    "colour": {
+      "title": "COLOUR",
+      "balayage": "Balayage",
+      "highlights": "Highlights",
+      "fullColorStyle": "Full Color & Style",
+      "ombreSombre": "Ombré / Sombré",
+      "rootsTouchUp": "Roots Touch Up"
+    },
+    "cuts": {
+      "title": "CUT & STYLE",
+      "haircutStyle": "Haircut & Style",
+      "washStyle": "Wash & Style",
+      "updo": "Up-do",
+      "washDry": "Wash & Dry",
+      "fringeBangs": "Fringe / Bangs Trim"
+    },
+    "treatments": {
+      "title": "TREATMENTS",
+      "deepConditioning": "Deep Conditioning",
+      "keratinTreatment": "Keratin Treatment",
+      "hairBotox": "Hair Botox",
+      "drSorbie": "Dr. Sorbie Treatment"
+    },
+    "browFace": {
+      "title": "BROW & FACE",
+      "eyebrowWax": "Eyebrow Wax",
+      "eyebrowThreading": "Eyebrow Threading",
+      "fullFaceWax": "Full Face Wax",
+      "fullFaceThreading": "Full Face Threading"
+    },
+    "makeup": {
+      "title": "MAKE UP",
+      "daily": "Daily",
+      "evening": "Evening",
+      "bridal": "Bridal"
+    }
+  },
+  "location": {
+    "title": "LOCATION",
+    "address": "390 Steeles Ave W",
+    "city": "Thornhill, ON",
+    "hours": "Hours",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "getDirections": "Get Directions"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "common": {
+    "languageSwitch": "فارسی"
+  }
+}

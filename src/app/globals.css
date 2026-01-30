@@ -1,26 +1,255 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Color Palette - Warm, Elegant Salon Aesthetic */
+  --color-cream: #F0EAE0;
+  --color-cream-light: #FAF8F5;
+  --color-warm-gray: #323232;
+  --color-warm-gray-light: #4a4a4a;
+  --color-gold: #C9A96E;
+  --color-gold-dark: #B8956A;
+  --color-charcoal: #1a1a1a;
+  
+  /* Semantic Colors */
+  --color-background: var(--color-cream-light);
+  --color-foreground: var(--color-charcoal);
+  --color-primary: var(--color-warm-gray);
+  --color-accent: var(--color-gold);
+  
+  /* Typography */
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+@keyframes glow-fade-in {
+  from { 
+    filter: brightness(1.10) drop-shadow(0 0 0px rgba(201, 169, 110, 0)); 
+  }
+  to { 
+    filter: brightness(1.20) drop-shadow(0 0 60px rgba(192, 151, 75, 0.5)); 
   }
 }
 
+.glow-gold {
+  filter: brightness(1.10) drop-shadow(0 0 0px rgba(199, 164, 99, 0));
+  animation: glow-fade-in 2s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Reset margins and padding */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-warm-gray-light);
+}
+
+/* Hide scrollbar for slider */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dropdown animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Gallery animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fadeInScale {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.4s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.4s ease-out forwards;
+}
+
+/* Staggered gallery items */
+.gallery-item {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0ms; }
+.gallery-item:nth-child(2) { animation-delay: 50ms; }
+.gallery-item:nth-child(3) { animation-delay: 100ms; }
+.gallery-item:nth-child(4) { animation-delay: 150ms; }
+.gallery-item:nth-child(5) { animation-delay: 200ms; }
+.gallery-item:nth-child(6) { animation-delay: 250ms; }
+.gallery-item:nth-child(7) { animation-delay: 300ms; }
+.gallery-item:nth-child(8) { animation-delay: 350ms; }
+.gallery-item:nth-child(9) { animation-delay: 400ms; }
+.gallery-item:nth-child(10) { animation-delay: 450ms; }
+
+/* RTL Support - Keep visual/layout elements LTR */
+[dir="rtl"] section,
+[dir="rtl"] main,
+[dir="rtl"] nav,
+[dir="rtl"] .swiper,
+[dir="rtl"] .swiper-wrapper,
+[dir="rtl"] .swiper-slide,
+[dir="rtl"] header,
+[dir="rtl"] footer {
+  direction: ltr;
+}
+
+/* RTL text blocks - only apply to standalone text, not inside centered containers */
+[dir="rtl"] .text-center,
+[dir="rtl"] .text-center * {
+  direction: ltr;
+  text-align: center;
+}
+
+/* RTL for left-aligned text blocks that should be right-aligned in Farsi */
+[dir="rtl"] .rtl-text {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Keep icons from flipping */
+[dir="rtl"] svg {
+  direction: ltr;
 }

@@ -6,15 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-icons": "node scripts/generate-icons.js",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "next": "16.1.5",
+    "next-intl": "^4.1.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "png-to-ico": "^2.1.8",
+    "sharp": "^0.33.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
